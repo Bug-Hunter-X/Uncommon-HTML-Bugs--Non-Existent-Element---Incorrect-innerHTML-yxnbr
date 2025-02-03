@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <div id="newDiv"></div>
+  <script>
+    // Wait for the DOM to be fully loaded
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Accessing elements after the DOM is ready
+        document.getElementById('myDiv').textContent = "This is fixed";
+        document.getElementById('newDiv').textContent = 123;
+    });
+  </script>
+</body>
+</html>
