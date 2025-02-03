@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Attempting to access an element that doesn't exist yet
+    document.getElementById('nonExistentElement').innerHTML = "This won't work";
+    // Incorrectly using innerHTML when it should be textContent
+    document.getElementById("myDiv").innerHTML = 123; // This will work but it is bad practice for numbers
+  </script>
+</body>
+</html>
